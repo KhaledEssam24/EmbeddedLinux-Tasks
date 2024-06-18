@@ -17,4 +17,5 @@ while True:
             print("Enter Valid Website")
         continue
     except KeyboardInterrupt :
+        print("\nProgram terminated by user")
         break

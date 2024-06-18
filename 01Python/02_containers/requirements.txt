@@ -1,0 +1,6 @@
+pyautoGui
+lxml
+beautifulsoup4
+requests
+pprintpp
+opencv-python
