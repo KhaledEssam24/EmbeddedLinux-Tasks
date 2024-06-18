@@ -23,7 +23,7 @@ def disp_extension()->None:
     point = None
     while point is None:
         try:
-            point = pyautogui.locateOnScreen(path + '/extension.png',confidence=0.7)   
+            point = pyautogui.locateOnScreen(path + '/screenshots' + '/extension.png',confidence=0.7)   
         except pyautogui.ImageNotFoundException:
             print(f"Image  Not Found")
     pyautogui.click(pyautogui.center(point))
@@ -43,7 +43,7 @@ def install_extension():
 
         while point is None:
             try:
-                point = pyautogui.locateOnScreen(path + value,confidence=0.7)   
+                point = pyautogui.locateOnScreen(path + '/screenshots' + value,confidence=0.7)   
             except pyautogui.ImageNotFoundException:
                 print(f"Image {value} Not Found")
 
