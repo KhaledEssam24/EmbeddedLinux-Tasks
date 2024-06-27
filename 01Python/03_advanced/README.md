@@ -12,6 +12,11 @@ then install dependiencies by running this command
 python3 -m pip install -r requirements.txt
 ```
 
+To run doxygen parser code you first need to download doxygen
+```
+sudo apt-get install doxygen
+```
+
 To run anyfile run command 
 ```
 python3 <FileName>.py

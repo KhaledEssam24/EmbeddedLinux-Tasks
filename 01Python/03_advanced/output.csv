@@ -1,0 +1,6 @@
+Signature,Parameters Name,Parameters Type,IDs
+Dog::Dog,_name,const char *,777999
+void Dog::bark,,void,650694
+bool Dog::checkEnergy,energyToExpend,int,819089
+void Dog::run,minutes,int,167226
+void Dog::sleep,minutes,int,769214

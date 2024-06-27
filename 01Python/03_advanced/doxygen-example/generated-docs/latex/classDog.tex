@@ -1,0 +1,354 @@
+\hypertarget{classDog}{}\doxysection{Dog Class Reference}
+\label{classDog}\index{Dog@{Dog}}
+
+
+Represents a dog.  
+
+
+
+
+{\ttfamily \#include $<$dog.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDog_add97c728b3dd9652ce9c68276774242c}{Dog}} (const char $\ast$\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{classDog}{Dog}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDog_a710429cc93dc5140d5616f72804468a9}{bark}} (void)
+\begin{DoxyCompactList}\small\item\em Causes the dog to bark. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDog_a756ea89c1b661023452d87063049145e}{run}} (int minutes)
+\begin{DoxyCompactList}\small\item\em Causes the dog to run. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDog_a8082ce753fd0911a6744bfa553a65e48}{sleep}} (int minutes)
+\begin{DoxyCompactList}\small\item\em Causes the dog to sleep. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classDog_a50f21c8181e2871699af6fe8edad9a4f}{check\+Energy}} (int energy\+To\+Expend)
+\begin{DoxyCompactList}\small\item\em Checks the dog\textquotesingle{}s energy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}}
+\begin{DoxyCompactList}\small\item\em The dog\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}}
+\begin{DoxyCompactList}\small\item\em The dog\textquotesingle{}s available energy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a dog. 
+
+This class keeps track of the dog\textquotesingle{}s energy level, and performs actions for the dog based on how much energy it has. Sleeping regains energy for the dog, while barking and running use energy up. 
+
+Definition at line 13 of file dog.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDog_add97c728b3dd9652ce9c68276774242c}\label{classDog_add97c728b3dd9652ce9c68276774242c}} 
+\index{Dog@{Dog}!Dog@{Dog}}
+\index{Dog@{Dog}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{Dog()}{Dog()}}
+{\footnotesize\ttfamily Dog\+::\+Dog (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Creates a new \mbox{\hyperlink{classDog}{Dog}}. 
+
+Creates a new \mbox{\hyperlink{classDog}{Dog}} named {\ttfamily \+\_\+name} with half of its maximum energy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name} & The dog\textquotesingle{}s name. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file dog.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{5                           : \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}}(\_name) \{}
+\DoxyCodeLine{6     \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} = \mbox{\hyperlink{dog_8hpp_abf472630357fc73cf3f507ed2fa69074}{MAX\_ENERGY}} / 2;}
+\DoxyCodeLine{7     printf(\textcolor{stringliteral}{"{}Created \%s the dog.\(\backslash\)n"{}}, \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}});}
+\DoxyCodeLine{8 \}}
+
+\end{DoxyCode}
+
+
+References energy, MAX\+\_\+\+ENERGY, and name.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDog_a710429cc93dc5140d5616f72804468a9}\label{classDog_a710429cc93dc5140d5616f72804468a9}} 
+\index{Dog@{Dog}!bark@{bark}}
+\index{bark@{bark}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{bark()}{bark()}}
+{\footnotesize\ttfamily void Dog\+::bark (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Causes the dog to bark. 
+
+Causes the dog to bark if it has enough energy to do so. Barking costs 1 energy to do. If the dog does not have enough energy, then the bark fails. 
+
+Definition at line 10 of file dog.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{10                    \{}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} energyToExpend = 1;}
+\DoxyCodeLine{12     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDog_a50f21c8181e2871699af6fe8edad9a4f}{checkEnergy}}(energyToExpend)) \{}
+\DoxyCodeLine{13         \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} -\/= energyToExpend;}
+\DoxyCodeLine{14         printf(\textcolor{stringliteral}{"{}\%s BARKS!\(\backslash\)n"{}}, \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}});}
+\DoxyCodeLine{15     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{16         fprintf(stderr, \textcolor{stringliteral}{"{}\%s is too tired to bark.\(\backslash\)n"{}}, \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}});}
+\DoxyCodeLine{17     \}}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+
+
+References check\+Energy(), energy, and name.
+
+
+
+Referenced by test\+Dog().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classDog_a710429cc93dc5140d5616f72804468a9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classDog_a710429cc93dc5140d5616f72804468a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDog_a50f21c8181e2871699af6fe8edad9a4f}\label{classDog_a50f21c8181e2871699af6fe8edad9a4f}} 
+\index{Dog@{Dog}!checkEnergy@{checkEnergy}}
+\index{checkEnergy@{checkEnergy}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{checkEnergy()}{checkEnergy()}}
+{\footnotesize\ttfamily bool Dog\+::check\+Energy (\begin{DoxyParamCaption}\item[{int}]{energy\+To\+Expend }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Checks the dog\textquotesingle{}s energy. 
+
+Compares an amount of energy with the dog\textquotesingle{}s current available energy. This function can be used to determine if the dog is able to take an action that costs energy.
+
+
+\begin{DoxyParams}{Parameters}
+{\em energy\+To\+Expend} & An amount of energy to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the dog has enough energy, and false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file dog.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                         \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} > energyToExpend) \{}
+\DoxyCodeLine{52         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{55 \}}
+
+\end{DoxyCode}
+
+
+References energy.
+
+
+
+Referenced by bark(), and run().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDog_a50f21c8181e2871699af6fe8edad9a4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDog_a756ea89c1b661023452d87063049145e}\label{classDog_a756ea89c1b661023452d87063049145e}} 
+\index{Dog@{Dog}!run@{run}}
+\index{run@{run}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Dog\+::run (\begin{DoxyParamCaption}\item[{int}]{minutes }\end{DoxyParamCaption})}
+
+
+
+Causes the dog to run. 
+
+Causes the dog to run for an amount of time if it has enough energy to run for that long. If the dog does not have enough energy, then the run fails. If the dog cannot complete the full run, no running takes place and no energy is expended. Running costs 3 energy per minute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em minutes} & Number of minutes for the dog to run. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file dog.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                          \{}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} energyToExpend = \mbox{\hyperlink{utility_8cpp_a50de380d6a4786c51a18168d9d9c7fa1}{multiply}}(minutes, 3);}
+\DoxyCodeLine{22     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDog_a50f21c8181e2871699af6fe8edad9a4f}{checkEnergy}}(energyToExpend)) \{}
+\DoxyCodeLine{23         \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} -\/= energyToExpend;}
+\DoxyCodeLine{24         printf(\textcolor{stringliteral}{"{}\%s runs for \%d minute\%s.\(\backslash\)n"{}},}
+\DoxyCodeLine{25                \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}},}
+\DoxyCodeLine{26                minutes,}
+\DoxyCodeLine{27                minutes == 1 ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}s"{}});}
+\DoxyCodeLine{28     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{29         fprintf(stderr,}
+\DoxyCodeLine{30                 \textcolor{stringliteral}{"{}\%s is too tired to run for \%d minute\%s.\(\backslash\)n"{}},}
+\DoxyCodeLine{31                 \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}},}
+\DoxyCodeLine{32                 minutes,}
+\DoxyCodeLine{33                 minutes == 1 ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}s"{}});}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+References check\+Energy(), energy, multiply(), and name.
+
+
+
+Referenced by test\+Dog().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classDog_a756ea89c1b661023452d87063049145e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classDog_a756ea89c1b661023452d87063049145e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDog_a8082ce753fd0911a6744bfa553a65e48}\label{classDog_a8082ce753fd0911a6744bfa553a65e48}} 
+\index{Dog@{Dog}!sleep@{sleep}}
+\index{sleep@{sleep}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily void Dog\+::sleep (\begin{DoxyParamCaption}\item[{int}]{minutes }\end{DoxyParamCaption})}
+
+
+
+Causes the dog to sleep. 
+
+Sleeping replenishes the dog\textquotesingle{}s energy. The dog regains an amount of energy equal to twice the number of minutes slept. The dog will always sleep, regardless of how much energy it has remaining.
+
+
+\begin{DoxyParams}{Parameters}
+{\em minutes} & Number of minutes for the dog to sleep. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file dog.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                            \{}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} energyToRegain = \mbox{\hyperlink{utility_8cpp_a50de380d6a4786c51a18168d9d9c7fa1}{multiply}}(minutes, 2);}
+\DoxyCodeLine{39     \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} += energyToRegain;}
+\DoxyCodeLine{40     printf(\textcolor{stringliteral}{"{}\%s sleeps for \%d minute\%s.\(\backslash\)n"{}},}
+\DoxyCodeLine{41            \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}},}
+\DoxyCodeLine{42            minutes,}
+\DoxyCodeLine{43            minutes == 1 ? \textcolor{stringliteral}{"{}"{}} : \textcolor{stringliteral}{"{}s"{}});}
+\DoxyCodeLine{44     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} > \mbox{\hyperlink{dog_8hpp_abf472630357fc73cf3f507ed2fa69074}{MAX\_ENERGY}}) \{}
+\DoxyCodeLine{45         \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} = \mbox{\hyperlink{dog_8hpp_abf472630357fc73cf3f507ed2fa69074}{MAX\_ENERGY}};}
+\DoxyCodeLine{46         printf(\textcolor{stringliteral}{"{}\%s is fully rested.\(\backslash\)n"{}}, \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}});}
+\DoxyCodeLine{47     \}}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}
+
+
+References energy, MAX\+\_\+\+ENERGY, multiply(), and name.
+
+
+
+Referenced by test\+Dog().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classDog_a8082ce753fd0911a6744bfa553a65e48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classDog_a8082ce753fd0911a6744bfa553a65e48_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDog_a7adc584eba62f218dd3170a8a1fbf176}\label{classDog_a7adc584eba62f218dd3170a8a1fbf176}} 
+\index{Dog@{Dog}!energy@{energy}}
+\index{energy@{energy}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{energy}{energy}}
+{\footnotesize\ttfamily int Dog\+::energy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The dog\textquotesingle{}s available energy. 
+
+Represents the amount of energy the dog has available. This is set in the constructor and should not be accessed externally. Taking actions that cost the dog energy will cause this value to drop, and sleeping will cause this value to rise. 
+
+Definition at line 89 of file dog.\+hpp.
+
+
+
+Referenced by bark(), check\+Energy(), Dog(), run(), and sleep().
+
+\mbox{\Hypertarget{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}\label{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}} 
+\index{Dog@{Dog}!name@{name}}
+\index{name@{name}!Dog@{Dog}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily const char$\ast$ Dog\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The dog\textquotesingle{}s name. 
+
+Represents the dog\textquotesingle{}s name. This is set when the dog is created, and cannot be changed afterwards. 
+
+Definition at line 79 of file dog.\+hpp.
+
+
+
+Referenced by bark(), Dog(), run(), and sleep().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{dog_8hpp}{dog.\+hpp}}\item 
+src/\mbox{\hyperlink{dog_8cpp}{dog.\+cpp}}\end{DoxyCompactItemize}

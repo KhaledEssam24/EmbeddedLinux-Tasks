@@ -3,3 +3,4 @@ SpeechRecognition
 PyAudio
 playsound
 speak
+pandas

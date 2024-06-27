@@ -1,0 +1,164 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include \char`\"{}main.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dog.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utility.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\item 
+void \mbox{\hyperlink{main_8cpp_ade1ea7ec2e87f146e8b006c86e89bc04}{test\+Numbers}} (void)
+\item 
+void \mbox{\hyperlink{main_8cpp_ae0f669050fa21339b103732480fc9667}{test\+Dog}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6                                 \{}
+\DoxyCodeLine{7     printf(\textcolor{stringliteral}{"{}Start\(\backslash\)n\(\backslash\)n"{}});}
+\DoxyCodeLine{8     \mbox{\hyperlink{main_8cpp_ade1ea7ec2e87f146e8b006c86e89bc04}{testNumbers}}();}
+\DoxyCodeLine{9     printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{10     \mbox{\hyperlink{main_8cpp_ae0f669050fa21339b103732480fc9667}{testDog}}();}
+\DoxyCodeLine{11     printf(\textcolor{stringliteral}{"{}\(\backslash\)nEnd\(\backslash\)n"{}});}
+\DoxyCodeLine{12     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{13 \}}
+
+\end{DoxyCode}
+
+
+References test\+Dog(), and test\+Numbers().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_ae0f669050fa21339b103732480fc9667}\label{main_8cpp_ae0f669050fa21339b103732480fc9667}} 
+\index{main.cpp@{main.cpp}!testDog@{testDog}}
+\index{testDog@{testDog}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testDog()}{testDog()}}
+{\footnotesize\ttfamily void test\+Dog (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 27 of file main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                    \{}
+\DoxyCodeLine{28     printf(\textcolor{stringliteral}{"{}Testing Dog...\(\backslash\)n"{}});}
+\DoxyCodeLine{29     \mbox{\hyperlink{classDog}{Dog}}* fido = \textcolor{keyword}{new} \mbox{\hyperlink{classDog}{Dog}}(\textcolor{stringliteral}{"{}Fido"{}});}
+\DoxyCodeLine{30     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{31         fido-\/>\mbox{\hyperlink{classDog_a710429cc93dc5140d5616f72804468a9}{bark}}();}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     fido-\/>\mbox{\hyperlink{classDog_a8082ce753fd0911a6744bfa553a65e48}{sleep}}(1);}
+\DoxyCodeLine{34     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 5; i++) \{}
+\DoxyCodeLine{35         fido-\/>\mbox{\hyperlink{classDog_a710429cc93dc5140d5616f72804468a9}{bark}}();}
+\DoxyCodeLine{36     \}}
+\DoxyCodeLine{37     fido-\/>\mbox{\hyperlink{classDog_a8082ce753fd0911a6744bfa553a65e48}{sleep}}(1000);}
+\DoxyCodeLine{38     fido-\/>\mbox{\hyperlink{classDog_a756ea89c1b661023452d87063049145e}{run}}(6);}
+\DoxyCodeLine{39     fido-\/>\mbox{\hyperlink{classDog_a756ea89c1b661023452d87063049145e}{run}}(3);}
+\DoxyCodeLine{40     fido-\/>\mbox{\hyperlink{classDog_a8082ce753fd0911a6744bfa553a65e48}{sleep}}(1);}
+\DoxyCodeLine{41     fido-\/>\mbox{\hyperlink{classDog_a710429cc93dc5140d5616f72804468a9}{bark}}();}
+\DoxyCodeLine{42     printf(\textcolor{stringliteral}{"{}Dog test complete.\(\backslash\)n"{}});}
+\DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+
+
+References Dog\+::bark(), Dog\+::run(), and Dog\+::sleep().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae0f669050fa21339b103732480fc9667_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{main_8cpp_ae0f669050fa21339b103732480fc9667_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_ade1ea7ec2e87f146e8b006c86e89bc04}\label{main_8cpp_ade1ea7ec2e87f146e8b006c86e89bc04}} 
+\index{main.cpp@{main.cpp}!testNumbers@{testNumbers}}
+\index{testNumbers@{testNumbers}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testNumbers()}{testNumbers()}}
+{\footnotesize\ttfamily void test\+Numbers (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file main.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15                        \{}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} x = 5;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} y = 6;}
+\DoxyCodeLine{18     printf(\textcolor{stringliteral}{"{}Testing numbers...\(\backslash\)n"{}});}
+\DoxyCodeLine{19     printf(\textcolor{stringliteral}{"{}\%d squared is \%d\(\backslash\)n"{}}, x, \mbox{\hyperlink{utility_8cpp_ab12b3cad66448e2bfc8c590d002052da}{square}}(x));}
+\DoxyCodeLine{20     printf(\textcolor{stringliteral}{"{}\%d times \%d is \%d\(\backslash\)n"{}}, x, y, \mbox{\hyperlink{utility_8cpp_a50de380d6a4786c51a18168d9d9c7fa1}{multiply}}(x, y));}
+\DoxyCodeLine{21     printf(\textcolor{stringliteral}{"{}The magic number is \%d\(\backslash\)n"{}}, \mbox{\hyperlink{utility_8hpp_a54061e5993a5517320d425f44408cc86}{MAGIC\_NUMBER}});}
+\DoxyCodeLine{22     printf(\textcolor{stringliteral}{"{}\%d magicked is \%d\(\backslash\)n"{}}, x, \mbox{\hyperlink{utility_8cpp_a07a97f4470961bb441483bc3e8748861}{magic}}(x));}
+\DoxyCodeLine{23     printf(\textcolor{stringliteral}{"{}Fight: \%d\(\backslash\)n"{}}, \mbox{\hyperlink{utility_8cpp_ab2d299d418c81fbbdb83fe90f0d11bb2}{battleOfTheFiveGods}}());}
+\DoxyCodeLine{24     printf(\textcolor{stringliteral}{"{}Number test complete.\(\backslash\)n"{}});}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+
+
+References battle\+Of\+The\+Five\+Gods(), magic(), MAGIC\+\_\+\+NUMBER, multiply(), and square().
+
+
+
+Referenced by main().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{main_8cpp_ade1ea7ec2e87f146e8b006c86e89bc04_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{main_8cpp_ade1ea7ec2e87f146e8b006c86e89bc04_icgraph}
+\end{center}
+\end{figure}

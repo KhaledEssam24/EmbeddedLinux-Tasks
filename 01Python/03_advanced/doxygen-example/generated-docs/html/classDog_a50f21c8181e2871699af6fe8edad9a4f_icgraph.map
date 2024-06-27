@@ -1,0 +1,7 @@
+<map id="Dog::checkEnergy" name="Dog::checkEnergy">
+<area shape="rect" id="node1" title="Checks the dog&#39;s energy." alt="" coords="363,31,501,57"/>
+<area shape="rect" id="node2" href="$classDog.html#a710429cc93dc5140d5616f72804468a9" title="Causes the dog to bark." alt="" coords="229,5,315,32"/>
+<area shape="rect" id="node5" href="$classDog.html#a756ea89c1b661023452d87063049145e" title="Causes the dog to run." alt="" coords="233,56,311,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae0f669050fa21339b103732480fc9667" title=" " alt="" coords="108,31,181,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,31,60,57"/>
+</map>
