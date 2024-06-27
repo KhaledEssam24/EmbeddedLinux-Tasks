@@ -2,3 +2,4 @@ gtts
 SpeechRecognition
 PyAudio
 playsound
+speak
