@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['energy_7',['energy',['../classDog.html#a7adc584eba62f218dd3170a8a1fbf176',1,'Dog']]]
+  ['max_5fenergy_6',['MAX_ENERGY',['../dog_8hpp.html#abf472630357fc73cf3f507ed2fa69074',1,'dog.hpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['checkenergy_36',['checkEnergy',['../classDog.html#a50f21c8181e2871699af6fe8edad9a4f',1,'Dog']]]
+  ['checkenergy_14',['checkEnergy',['../classDog.html#a50f21c8181e2871699af6fe8edad9a4f',1,'Dog']]]
 ];

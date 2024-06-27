@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['armada_48',['ARMADA',['../utility_8hpp.html#a84422ed724d308e43cb462ed2cca7b39',1,'utility.hpp']]]
+  ['max_5fenergy_20',['MAX_ENERGY',['../dog_8hpp.html#abf472630357fc73cf3f507ed2fa69074',1,'dog.hpp']]]
 ];

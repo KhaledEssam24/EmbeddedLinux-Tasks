@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="dog_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dog_8hpp.html">dog.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="utility_8hpp.html">utility.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;utility.hpp&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classDog.html#add97c728b3dd9652ce9c68276774242c">    5</a></span>&#160;<a class="code" href="classDog.html#add97c728b3dd9652ce9c68276774242c">Dog::Dog</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* _name) : name(_name) {</div>
@@ -91,7 +91,7 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classDog.html#a756ea89c1b661023452d87063049145e">   20</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDog.html#a756ea89c1b661023452d87063049145e">Dog::run</a>(<span class="keywordtype">int</span> minutes) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> energyToExpend = <a class="code" href="utility_8cpp.html#a50de380d6a4786c51a18168d9d9c7fa1">multiply</a>(minutes, 3);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> energyToExpend = multiply(minutes, 3);</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classDog.html#a50f21c8181e2871699af6fe8edad9a4f">checkEnergy</a>(energyToExpend)) {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="classDog.html#a7adc584eba62f218dd3170a8a1fbf176">energy</a> -= energyToExpend;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        printf(<span class="stringliteral">&quot;%s runs for %d minute%s.\n&quot;</span>,</div>
@@ -108,7 +108,7 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classDog.html#a8082ce753fd0911a6744bfa553a65e48">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classDog.html#a8082ce753fd0911a6744bfa553a65e48">Dog::sleep</a>(<span class="keywordtype">int</span> minutes) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> energyToRegain = <a class="code" href="utility_8cpp.html#a50de380d6a4786c51a18168d9d9c7fa1">multiply</a>(minutes, 2);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> energyToRegain = multiply(minutes, 2);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classDog.html#a7adc584eba62f218dd3170a8a1fbf176">energy</a> += energyToRegain;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    printf(<span class="stringliteral">&quot;%s sleeps for %d minute%s.\n&quot;</span>,</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;           <a class="code" href="classDog.html#aef517d1bf3fce93a2cc722ff0b7d13ff">name</a>,</div>
@@ -135,8 +135,6 @@ $(function() {
 <div class="ttc" id="aclassDog_html_aef517d1bf3fce93a2cc722ff0b7d13ff"><div class="ttname"><a href="classDog.html#aef517d1bf3fce93a2cc722ff0b7d13ff">Dog::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">The dog's name.</div><div class="ttdef"><b>Definition:</b> <a href="dog_8hpp_source.html#l00079">dog.hpp:79</a></div></div>
 <div class="ttc" id="adog_8hpp_html"><div class="ttname"><a href="dog_8hpp.html">dog.hpp</a></div></div>
 <div class="ttc" id="adog_8hpp_html_abf472630357fc73cf3f507ed2fa69074"><div class="ttname"><a href="dog_8hpp.html#abf472630357fc73cf3f507ed2fa69074">MAX_ENERGY</a></div><div class="ttdeci">#define MAX_ENERGY</div><div class="ttdef"><b>Definition:</b> <a href="dog_8hpp_source.html#l00004">dog.hpp:4</a></div></div>
-<div class="ttc" id="autility_8cpp_html_a50de380d6a4786c51a18168d9d9c7fa1"><div class="ttname"><a href="utility_8cpp.html#a50de380d6a4786c51a18168d9d9c7fa1">multiply</a></div><div class="ttdeci">int multiply(int x, int y)</div><div class="ttdoc">Multiplies two numbers.</div><div class="ttdef"><b>Definition:</b> <a href="utility_8cpp_source.html#l00007">utility.cpp:7</a></div></div>
-<div class="ttc" id="autility_8hpp_html"><div class="ttname"><a href="utility_8hpp.html">utility.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

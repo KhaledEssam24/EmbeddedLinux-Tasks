@@ -111,24 +111,12 @@ Definition at line 10 of file dog.\+cpp.
 
 References check\+Energy(), energy, and name.
 
-
-
-Referenced by test\+Dog().
-
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=284pt]{classDog_a710429cc93dc5140d5616f72804468a9_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=312pt]{classDog_a710429cc93dc5140d5616f72804468a9_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classDog_a50f21c8181e2871699af6fe8edad9a4f}\label{classDog_a50f21c8181e2871699af6fe8edad9a4f}} 
@@ -178,7 +166,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classDog_a50f21c8181e2871699af6fe8edad9a4f_icgraph}
+\includegraphics[width=284pt]{classDog_a50f21c8181e2871699af6fe8edad9a4f_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classDog_a756ea89c1b661023452d87063049145e}\label{classDog_a756ea89c1b661023452d87063049145e}} 
@@ -205,7 +193,7 @@ Definition at line 20 of file dog.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{20                          \{}
-\DoxyCodeLine{21     \textcolor{keywordtype}{int} energyToExpend = \mbox{\hyperlink{utility_8cpp_a50de380d6a4786c51a18168d9d9c7fa1}{multiply}}(minutes, 3);}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} energyToExpend = multiply(minutes, 3);}
 \DoxyCodeLine{22     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classDog_a50f21c8181e2871699af6fe8edad9a4f}{checkEnergy}}(energyToExpend)) \{}
 \DoxyCodeLine{23         \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} -\/= energyToExpend;}
 \DoxyCodeLine{24         printf(\textcolor{stringliteral}{"{}\%s runs for \%d minute\%s.\(\backslash\)n"{}},}
@@ -224,11 +212,7 @@ Definition at line 20 of file dog.\+cpp.
 \end{DoxyCode}
 
 
-References check\+Energy(), energy, multiply(), and name.
-
-
-
-Referenced by test\+Dog().
+References check\+Energy(), energy, and name.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -236,14 +220,6 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=278pt]{classDog_a756ea89c1b661023452d87063049145e_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=306pt]{classDog_a756ea89c1b661023452d87063049145e_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classDog_a8082ce753fd0911a6744bfa553a65e48}\label{classDog_a8082ce753fd0911a6744bfa553a65e48}} 
@@ -270,7 +246,7 @@ Definition at line 37 of file dog.\+cpp.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{37                            \{}
-\DoxyCodeLine{38     \textcolor{keywordtype}{int} energyToRegain = \mbox{\hyperlink{utility_8cpp_a50de380d6a4786c51a18168d9d9c7fa1}{multiply}}(minutes, 2);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} energyToRegain = multiply(minutes, 2);}
 \DoxyCodeLine{39     \mbox{\hyperlink{classDog_a7adc584eba62f218dd3170a8a1fbf176}{energy}} += energyToRegain;}
 \DoxyCodeLine{40     printf(\textcolor{stringliteral}{"{}\%s sleeps for \%d minute\%s.\(\backslash\)n"{}},}
 \DoxyCodeLine{41            \mbox{\hyperlink{classDog_aef517d1bf3fce93a2cc722ff0b7d13ff}{name}},}
@@ -285,28 +261,8 @@ Definition at line 37 of file dog.\+cpp.
 \end{DoxyCode}
 
 
-References energy, MAX\+\_\+\+ENERGY, multiply(), and name.
+References energy, MAX\+\_\+\+ENERGY, and name.
 
-
-
-Referenced by test\+Dog().
-
-Here is the call graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=241pt]{classDog_a8082ce753fd0911a6744bfa553a65e48_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=316pt]{classDog_a8082ce753fd0911a6744bfa553a65e48_icgraph}
-\end{center}
-\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

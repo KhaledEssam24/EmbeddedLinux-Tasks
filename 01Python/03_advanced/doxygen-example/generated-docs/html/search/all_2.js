@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['checkenergy_3',['checkEnergy',['../classDog.html#a50f21c8181e2871699af6fe8edad9a4f',1,'Dog']]]
+  ['dog_2',['Dog',['../classDog.html',1,'Dog'],['../classDog.html#add97c728b3dd9652ce9c68276774242c',1,'Dog::Dog()']]],
+  ['dog_2ecpp_3',['dog.cpp',['../dog_8cpp.html',1,'']]],
+  ['dog_2ehpp_4',['dog.hpp',['../dog_8hpp.html',1,'']]]
 ];

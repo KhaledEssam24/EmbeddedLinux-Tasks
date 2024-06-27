@@ -1,5 +1,4 @@
 <map id="Dog::run" name="Dog::run">
-<area shape="rect" id="node1" title="Causes the dog to run." alt="" coords="5,31,83,57"/>
+<area shape="rect" id="node1" title="Causes the dog to run." alt="" coords="5,5,83,32"/>
 <area shape="rect" id="node2" href="$classDog.html#a50f21c8181e2871699af6fe8edad9a4f" title="Checks the dog&#39;s energy." alt="" coords="131,5,269,32"/>
-<area shape="rect" id="node3" href="$utility_8cpp.html#a50de380d6a4786c51a18168d9d9c7fa1" title="Multiplies two numbers." alt="" coords="162,56,238,83"/>
 </map>

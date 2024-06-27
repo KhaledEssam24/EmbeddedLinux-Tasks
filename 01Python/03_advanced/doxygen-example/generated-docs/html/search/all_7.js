@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_18',['name',['../classDog.html#aef517d1bf3fce93a2cc722ff0b7d13ff',1,'Dog']]]
+  ['sleep_9',['sleep',['../classDog.html#a8082ce753fd0911a6744bfa553a65e48',1,'Dog']]]
 ];
