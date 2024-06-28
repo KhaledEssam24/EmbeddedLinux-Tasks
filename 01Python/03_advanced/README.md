@@ -12,10 +12,7 @@ then install dependiencies by running this command
 python3 -m pip install -r requirements.txt
 ```
 
-To run doxygen parser code you first need to download doxygen
-```
-sudo apt-get install doxygen
-```
+To get the full experience while running sockets you have to run server.py first then clients.py
 
 To run anyfile run command 
 ```
