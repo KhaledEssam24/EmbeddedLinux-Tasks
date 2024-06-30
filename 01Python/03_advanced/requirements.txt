@@ -4,3 +4,6 @@ PyAudio
 playsound
 speak
 pandas
+geopy
+py-notifier
+plyer

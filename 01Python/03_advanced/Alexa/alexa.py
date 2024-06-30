@@ -7,7 +7,7 @@ import playsound
 import sys
 import logging
 
-sys.path.insert(0, '../02_containers')
+sys.path.insert(0, '../../02_containers')
 from vs_extension_installation import open_vs_code
 
 # Configure logging
@@ -50,7 +50,7 @@ class Alexa:
         elif "يوتيوب" in text:
             self.speak('فتح اليوتيوب الان')
             webbrowser.open_new("https://www.youtube.com/")
-        elif "انستا" in text:
+        elif "انست" in text:
             self.speak('فتح الانستغرام الان')
             webbrowser.open_new("https://www.instagram.com/")
         elif "توك" in text:
