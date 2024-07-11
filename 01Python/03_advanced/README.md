@@ -11,6 +11,10 @@ sudo apt-get install portaudio19-dev
 - Doxygen is to parse html output from doxygen and then store it in an csv file
 - GPIO is to generate gpio.c file with init ,write and read functions based on user choice
 
+To get access to Alexa-gpt2 you have to add transformers dependencies 
+```
+pip install --upgrade git+https://github.com/huggingface/transformers.git accelerate datasets[audio]
+```
 
 To run any file here please clone this repo and then navigate to the right place where you could find requirements.txt file 
 then install dependiencies by running this command 

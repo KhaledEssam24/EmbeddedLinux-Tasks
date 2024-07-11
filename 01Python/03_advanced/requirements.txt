@@ -1,9 +1,0 @@
-gtts
-SpeechRecognition
-PyAudio
-playsound
-speak
-pandas
-geopy
-py-notifier
-plyer
