@@ -75,3 +75,17 @@ int Server::Server_send(){
     std::cout << "Hello message sent" << std::endl;
     return 0;
 }
+
+int main(){
+    Server server;
+    server.Server_Create_Socket();
+    server.Server_Bind_Socket();
+    server.Server_Listen();
+    server.Server_Accept();
+    while (1)
+    {
+        server.Server_send();
+        server.Server_recv();
+    }
+    return 0;
+}
