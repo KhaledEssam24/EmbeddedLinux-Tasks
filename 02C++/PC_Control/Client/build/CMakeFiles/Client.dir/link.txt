@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Client.dir/App.cpp.o CMakeFiles/Client.dir/Client.cpp.o -o Client 

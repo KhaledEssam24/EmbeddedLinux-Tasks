@@ -4,16 +4,13 @@
 #include "iostream"
 #include "string.h"
 
-#define BUFFER_SIZE 1024
-
 class Server
 {
 private:
     int server_fd ,new_sock;
+    bool is_accepted = false;
     sockaddr_in address;
     int addrlen = sizeof(address);
-    char buffer[BUFFER_SIZE] = {0};
-    const char *message = "Hello from server";
 
 public:
     Server(/* args */);
@@ -21,7 +18,9 @@ public:
     int Server_Bind_Socket();
     int Server_Listen(int queue = 3);
     int Server_Accept();
-    int Server_recv();
-    int Server_send();
+    int Server_is_accepted(){
+        return new_sock;
+    }
+    int Server_send(const char *message);
     ~Server();
 };

@@ -1,0 +1,3 @@
+/media/khaled/1CC2F645C2F622A6/Embedded Linux Course/EmbeddedLinux-Tasks/02C++/PC_Control/Client/build/CMakeFiles/Client.dir
+/media/khaled/1CC2F645C2F622A6/Embedded Linux Course/EmbeddedLinux-Tasks/02C++/PC_Control/Client/build/CMakeFiles/edit_cache.dir
+/media/khaled/1CC2F645C2F622A6/Embedded Linux Course/EmbeddedLinux-Tasks/02C++/PC_Control/Client/build/CMakeFiles/rebuild_cache.dir

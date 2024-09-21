@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>Fb.png</file>
+        <file>YT.png</file>
+        <file>LinkedIn.png</file>
+        <file>gpt.png</file>
+    </qresource>
+</RCC>
