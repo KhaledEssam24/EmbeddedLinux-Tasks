@@ -15,16 +15,19 @@ void server_thread_func(Server& server){
     }
 }
 
+
 Server server;
 int main(int argc, char *argv[])
 {
-    std::thread server_thread(server_thread_func, std::ref(server));
+    std::thread server_thread1(server_thread_func, std::ref(server));
 
     QApplication a(argc, argv);
+    
     MainWindow w;
-    w.show();
+
+    w.show();   
     
-    server_thread.detach();
-    
+    server_thread1.detach();
+
     return a.exec();
 }

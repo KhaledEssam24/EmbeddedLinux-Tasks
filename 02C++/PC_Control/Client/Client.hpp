@@ -17,6 +17,7 @@ public:
     int Client_Create_Socket(int IP_protocol = AF_INET,int network = SOCK_STREAM ,int port = 8080);
     int Client_Connect();
     int Client_Recv();
+    int Client_Send(std::string message);
     std::string Client_Get_Msg();
     ~Client();
 };

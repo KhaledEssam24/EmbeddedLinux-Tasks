@@ -13,6 +13,12 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #a7a7a7a7; /* Dark gray background */
+    color: #ffffff; /* White text */
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="FB">
     <property name="enabled">
@@ -20,10 +26,10 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>100</y>
+      <x>70</x>
+      <y>30</y>
       <width>81</width>
-      <height>101</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="cursor">
@@ -90,9 +96,9 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>100</y>
-      <width>100</width>
-      <height>100</height>
+      <y>29</y>
+      <width>101</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="cursor">
@@ -158,9 +164,9 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>320</y>
-      <width>100</width>
+      <x>60</x>
+      <y>160</y>
+      <width>96</width>
       <height>100</height>
      </rect>
     </property>
@@ -228,7 +234,7 @@
     <property name="geometry">
      <rect>
       <x>220</x>
-      <y>320</y>
+      <y>160</y>
       <width>100</width>
       <height>100</height>
      </rect>
@@ -288,6 +294,66 @@
     </property>
     <property name="flat">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Enter">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>310</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+QPushButton:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+QPushButton:pressed {
+    background-color: #222; /* Darker shade on press */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Enter Command</string>
+    </property>
+    <property name="icon">
+     <iconset theme="QIcon::ThemeIcon::UserAvailable"/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Command_txt">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>350</y>
+      <width>360</width>
+      <height>90</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+QLineEdit:focus {
+    border: 1px solid #00aaff; /* Cyan border on focus */
+    background-color: #333333;
+}</string>
     </property>
    </widget>
   </widget>

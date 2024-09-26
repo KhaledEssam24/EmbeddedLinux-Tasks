@@ -19,7 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_FB_clicked()
 {
     if (server.Server_is_accepted() >= 0)
-        server.Server_send("Facebook");   
+        server.Server_send("facebook");   
 }
 
 void MainWindow::on_YT_clicked()
@@ -38,4 +38,12 @@ void MainWindow::on_GPT_clicked()
 {
     if (server.Server_is_accepted() >= 0)
         server.Server_send("chatgpt");
+}
+
+void MainWindow::on_Enter_clicked()
+{
+    QString command = ui->Command_txt->text();
+    if (server.Server_is_accepted() >= 0)
+        server.Server_send(command.toStdString().c_str());
+    ui->Command_txt->clear();
 }

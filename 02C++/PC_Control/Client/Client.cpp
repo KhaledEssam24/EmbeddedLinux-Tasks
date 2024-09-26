@@ -58,6 +58,13 @@ int Client::Client_Recv(){
     return recv_len;
 }
 
+int Client::Client_Send(std::string message){
+    if(send(sock, message.c_str(), sizeof(message), 0) < 0){
+        return -1;
+    }
+    return 0;
+}
+
 std::string Client::Client_Get_Msg(){
     return std::string(buffer);
 }

@@ -1,6 +1,6 @@
 #include "Server.h"
 
-Server::Server(/* args */)
+Server::Server()
 {
 }
 
@@ -61,5 +61,15 @@ int Server::Server_send(const char *message){
         return -1;
     }
     std::cout << "Hello message sent" << std::endl;
+    return 0;
+}
+
+int Server::Server_recv(char* buffer , int size){
+    // Read the message from the client
+    int valread = read(new_sock, buffer, sizeof(buffer));
+    if (valread < 0) {
+        std::cerr << "Failed to receive message" << std::endl;
+        return -1;
+    }
     return 0;
 }

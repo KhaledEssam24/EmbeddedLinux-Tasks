@@ -22,6 +22,7 @@ private slots:
     void on_YT_clicked();
     void on_LIN_clicked();
     void on_GPT_clicked();
+    void on_Enter_clicked();
 
 private:
     Ui::MainWindow *ui;
